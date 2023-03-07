@@ -178,6 +178,12 @@ input[type="submit"]:hover{
     }
 }
 
+@media (max-width: 700px) {
+    #survey-form{
+        width: inherit;
+    }
+}
+
 @media (min-width: 910px) {
     #title{
         font-size: 2.5rem;
