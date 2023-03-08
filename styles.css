@@ -11,6 +11,9 @@
     margin: 0;
 }
 
+/* ************************************************** */
+/* font-size */
+
 html{
     font-size: 18px;
 }
@@ -39,17 +42,17 @@ header{
     padding-bottom: 1rem;
 }
 
-h1{
+#title{
+    font-size: 2rem;
     margin-bottom: 0.6rem;
 }
 
 /* ************************************************** */
 /* main styles */
 
-main{
+#main{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -61,38 +64,47 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    align-content: center;
+    padding: 0.5rem;
     width: 60%;
 }
 
-.presentation img{
+#img-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
     width: 100%;
     max-width: 850px;
-    height: auto;
-    object-fit: cover;
-    margin-bottom: 0.6rem;
 }
 
-.presentation p{
+#image{
+    max-width: 100%;
+    display: block;
+    height: auto;
+    object-fit: cover;
+}
+
+#img-caption{
+    margin-top: 0.5rem;
+    text-align: center;
     width: 100%;
     max-width: 850px;
-    text-align: center;
 }
 
 /* ************************************************** */
 /* tribute info styles */
 
-.tribute-info{
+#tribute-info{
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 60%;
     background-color:  #E0E0E0;
 }
 
-.tribute-info h2{
+#tribute-info h2{
     margin: 2rem 0 2rem 0;
     text-align: center;
     font-size: 1.5rem;
@@ -169,7 +181,7 @@ main{
     .presentation{
         width: 100%;
     }
-    .tribute-info{
+    #tribute-info{
         width: 100%;
     }
 }

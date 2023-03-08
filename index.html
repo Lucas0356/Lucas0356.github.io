@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Tribute of Johan Cruyff</title>
+    <title>Johan Cruyff tribute page</title>
 </head>
 <body>
     <header>
-        <h1>Johan Cruyff</h1>
+        <h1 id="title">Johan Cruyff</h1>
         <p class="bold">The man who revolutionized football</p>
     </header>
-    <main>
+    <main id="main">
         <div class="presentation">
-            <img src="https://tmssl.akamaized.net/images/foto/galerie/johan-cruijff-cruyff-ajax-1618234693-60657.jpg?lm=1618234893"
-            alt="Johan Cruyff">
-            <p>Johan Cruyff has been an influential figure in the world of football, both for his philosophy of 
-                the game and for his work in developing young players and coaches. He is considered one of the 
-                greatest footballers of all time.
+            <div id="img-div" class="presentation">
+                <img id="image" src="https://tmssl.akamaized.net/images/foto/galerie/johan-cruijff-cruyff-ajax-1618234693-60657.jpg?lm=1618234893"
+                alt="Johan Cruyff">
+                <div id="img-caption">
+                    Johan Cruyff, the legendary Dutch footballer, wearing the Ajax Amsterdam shirt
+                </div>
             </div>
-        <div class="tribute-info">
+        </div>
+        <div id="tribute-info">
             <h2>Johan Cruyff's timeline:</h2>
             <ul class="timeline">
                 <li><span class="bold">1947</span> - On April 25, Johan Cruyff is born in Amsterdam, Netherlands.</li>
@@ -43,7 +45,11 @@
             </div>
             <div class="divider"></div>
             <div class="more-info">
-                <p class="bold">If you're interested in learning more about the life and career of this iconic player, we recommend visiting his <a href="https://en.wikipedia.org/wiki/Johan_Cruyff" target="_blank">Wikipedia entry</a>.</p>
+                <p class="bold" >If you're interested in learning more about the life and career of this iconic 
+                    player, we recommend visiting his 
+                    <a id="tribute-link" href="https://en.wikipedia.org/wiki/Johan_Cruyff" 
+                    target="_blank">Wikipedia entry</a>.
+                </p>
             </div>
         </div>
     </main>
