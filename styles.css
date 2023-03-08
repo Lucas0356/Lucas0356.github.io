@@ -1,205 +1,162 @@
-/* import the Montserrat font  */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+/* ************************************************** */
+/* import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
 
-
-/* **************************************************** */
+/* ************************************************** */
 /* generals styles */
 
-* {
-    margin: 0;
-    padding: 0;
+*{
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 html{
     font-size: 18px;
 }
 
-/* **************************************************** */
-/* Body styles */
+/* ************************************************** */
+/* body styles */
 
 body{
-    background-color: #1e274b;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Poppins, sans-serif;
+    background-color: #A9A9A9;
     padding: 1rem;
-    width: 100%;
-    min-height: 100vh;
 }
 
-/* **************************************************** */
+/* ************************************************** */
 /* header styles */
 
 header{
+    color: #333333;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+h1{
+    margin-bottom: 0.6rem;
+}
+
+/* ************************************************** */
+/* main styles */
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ************************************************** */
+/* section description styles */
+
+.presentation{
+    background-color:  #E0E0E0;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    color: #e3ecf6;
+    width: 60%;
 }
 
-/* **************************************************** */
-/* Title and description styles */
+.presentation img{
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0.6rem;
+}
 
-#title, #description {
+.presentation p{
+    width: 100%;
+    max-width: 850px;
     text-align: center;
 }
 
-#title{
-    color: #91a0fa;
-    font-size: 2rem;
-    text-transform: uppercase;
-}
+/* ************************************************** */
+/* tribute info styles */
 
-#description{
-    font-weight: bold;
-    font-size: 1.3rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.2rem;
-    width: 60%;
-    min-width: 260px;
-    max-width: 700px;
-}
-
-header p.secundary-text{
+.tribute-info{
     margin-top: 1rem;
-    text-align: center;
-}
-
-/* **************************************************** */
-/* logo styles */
-
-.logo span{
-    color: #91a0fa;
-    border-radius: 50%;
-    padding: 10px;
-    margin-bottom: 0.5rem;
-    border: 2px solid #91a0fa;
-    font-size: 3rem;
-}
-
-/* **************************************************** */
-/* main styles */
-
-main{
-    width: 100%;
-    height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-direction: column;
-}
-
-/* **************************************************** */
-/* Form styles */
-
-#survey-form{
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    padding: 2rem; 
-    border-radius: 0.25rem;
-    background-color: #505eaa;
-    color: #140f07;
+    justify-content: center;
     width: 60%;
-    min-width: 260px;
-    max-width: 700px;
-    font-size: 1rem;
+    background-color:  #E0E0E0;
 }
 
-.form-group{
-    margin: 0.5rem 0;
+.tribute-info h2{
+    margin: 2rem 0 2rem 0;
+    text-align: center;
+    font-size: 1.5rem;
 }
 
-label {
-    margin: 0.5rem 0;
+/* ************************************************** */
+/* time-line styles */
+
+.timeline{
+    margin: 0 auto;
+    width: 50%;
 }
 
-input, textarea, select {
-    border-radius: 0.25rem;
-    padding: 0.5rem;
-    border: none;
-    margin: 10px 0;
-    height: 2.5rem;
-    font-size: 1rem;
-    color: #1e274b;
-    background-color: #e3ecf6;
+.timeline li{
+    margin-bottom: 1rem;
 }
 
-input::placeholder, textarea::placeholder, select::placeholder {
-    color: #1e274b;
+.timeline li span{
+    text-align: left;
 }
 
-.form-input, .form-textarea, .form-select{
-    width: 100%;
+/* ************************************************** */
+/* citation styles */
+
+.citation{
+    text-align: center;
+    width: 60%;
+    font-style: italic;
+    margin: 1rem 0;
+}
+
+/* ************************************************** */
+/* more-info styles */
+
+.more-info{
+    width: 90%;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.more-info p a{
+    color: #333333;
 }
 
 
-/* **************************************************** */
-/* radio and checkbox styles */
 
-.input-radio, .input-checkbox {
-    height: 1.25rem;
-    width: 1.25rem;
-    margin: 0 0.5rem 0 0;
-}
-
-.radio-label, .checkbox-label{
-    display: flex;
-}
-
-/* **************************************************** */
-/* textarea styles */
-
-textarea{
-    display: block;
-    min-height: 150px;
-    width: 100%;
-    resize: vertical;
-}
-
-/* **************************************************** */
-/* submit button styles */
-
-input[type="submit"]{
-    background-color: #91a0fa;
-    color: #140f07;
-    font-size: 1.1rem;
-}
-
-input[type="submit"]:hover{
-    cursor: pointer;
-}
-
-/* **************************************************** */
-/* bold text */
+/* ************************************************** */
+/* text bold */
 
 .bold{
     font-weight: bold;
 }
 
-/* **************************************************** */
-/* secundary text */
-
-.secundary-text{
-    font-size: 0.8rem;
-}
-
-/* **************************************************** */
+/* ************************************************** */
 /* media queries */
 
-@media (max-width: 910px) {
+@media (max-width:768px){
     html{
         font-size: 16px;
     }
-}
-
-@media (max-width: 700px) {
-    #survey-form{
-        width: inherit;
+    .presentation{
+        width: 100%;
     }
-}
-
-@media (min-width: 910px) {
-    #title{
-        font-size: 2.5rem;
+    .tribute-info{
+        width: 100%;
     }
 }

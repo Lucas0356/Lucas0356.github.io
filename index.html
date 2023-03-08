@@ -2,128 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Form</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Tribute of Johan Cruyff</title>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <span class="material-symbols-outlined">
-                photo_camera
-            </span>
-        </div>
-        <h1 id="title">Snapshot Studios</h1>
-        <p id="description">Capturing your most precious moments</p>
-        <p class="secundary-text">Contact us today to schedule your photo session.</p>
+        <h1>Johan Cruyff</h1>
+        <p class="bold">The man who revolutionized football</p>
     </header>
     <main>
-        <form id="survey-form">
-            <div class="form-group">
-                <label class="bold" id="name-label" for="name">
-                    Name:
-                    <input type="text" id="name" class="form-input" name="name" placeholder="Enter your name" required>
-                </label>
+        <div class="presentation">
+            <img src="https://tmssl.akamaized.net/images/foto/galerie/johan-cruijff-cruyff-ajax-1618234693-60657.jpg?lm=1618234893"
+            alt="Johan Cruyff">
+            <p>Johan Cruyff has been an influential figure in the world of football, both for his philosophy of 
+                the game and for his work in developing young players and coaches. He is considered one of the 
+                greatest footballers of all time.
             </div>
-            <div class="form-group">
-                <label class="bold" id="email-label" for="email">
-                    Email:
-                    <input id="email" class="form-input" name="email" type="email" placeholder="Enter your Email" required>
-                </label>
+        <div class="tribute-info">
+            <h2>Johan Cruyff's timeline:</h2>
+            <ul class="timeline">
+                <li><span class="bold">1947</span> - On April 25, Johan Cruyff is born in Amsterdam, Netherlands.</li>
+                <li><span class="bold">1957</span> - Begins playing football at Ajax Amsterdam, the club where he would spend much of his career.</li>
+                <li><span class="bold">1964</span> - Makes his debut in the Dutch league with Ajax.</li>
+                <li><span class="bold">1971-1973</span> - Wins three consecutive Ballon d'Or awards.</li>
+                <li><span class="bold">1973</span> - Transfers to FC Barcelona for a record fee at the time.</li>
+                <li><span class="bold">1974</span> - Leads the Dutch national team to the World Cup final, where they would lose to Germany.</li>
+                <li><span class="bold">1978-1979</span> - Leads the Dutch national team to the World Cup final, where they would lose to Germany</li>
+                <li><span class="bold">1981-1983</span> - Plays for Levante in Spain and the Washington Diplomats in the United States before retiring from football.</li>
+                <li><span class="bold">1985-1988</span> - Begins his coaching career at Ajax Amsterdam.</li>
+                <li><span class="bold">1988</span> - Leads Ajax to win the UEFA Champions League.</li>
+                <li><span class="bold">1992</span> - Leads FC Barcelona to win their first UEFA Champions League as a coach.</li>
+                <li><span class="bold">1999-2011</span> - Works as a commentator and sports analyst on Dutch television.</li>
+                <li><span class="bold">2016</span> - Passes away from lung cancer.</li>
+            </ul>
+            <div class="citation">
+                <p>"Johan Cruyff was an elegant and creative player. He was an artist on the football field. His style 
+                    and technique were imitated by many young players. He was a true football genius, and his legacy 
+                    in the sport will always be remembered." - Pelé.</p>
             </div>
-            <div class="form-group">
-                <p class="bold">Type of event:</p>
-                <label id="dropdown-label" for="dropdown">
-                    <select id="dropdown" class="form-select" name="type-event" required>
-                        <option disabled selected value>(Select one)</option>
-                        <option value="wedding">Wedding</option>
-                        <option value="birthday">Birthday</option>
-                        <option value="family-sessions">Family sessions</option>
-                        <option value="corporate-events">Corporate events</option>
-                        <option value="sports-events">Sports events</option>
-                        <option value="concerts">Concerts</option>
-                        <option value="festivals">Festivals</option>
-                        <option value="nature-photography">Nature photography</option>
-                        <option value="other-event">Other</option>
-                    </select>
-                </label>
+            <div class="more-info">
+                <p class="bold">If you're interested in learning more about the life and career of this iconic player, we recommend visiting his <a href="https://en.wikipedia.org/wiki/Johan_Cruyff" target="_blank">Wikipedia entry</a>.</p>
             </div>
-            <div class="form-group">
-                <label class="bold" id="date-label" for="date">Event date:
-                    <input id="date" class="form-input" name="event-date" type="date" min="2023-03-06" max="2024-12-31" required>
-                </label>
-            </div>
-            <div class="form-group">
-                <label class="bold" id="time-event-label" for="hour">Time of the event:
-                    <input id="time-event" class="form-input" name="event-hour" type="time" required>
-                </label>
-            </div>
-            <div class="form-group">
-                <label class="bold" id="location-label" for="location">
-                    Address of the event:
-                    <input id="location" class="form-input" name="location" type="text" placeholder="Enter the address" required>
-                </label>
-            </div>
-            <div class="form-group">
-                <label class="bold" id="number-label" for="number">
-                    Number of photographers needed:
-                    <input id="number" class="form-input" name="photographers" type="number" placeholder="(max 20)"
-                    min="1" max="20" required>
-                </label>
-            </div>
-            <div class="form-group">
-                <p class="bold">Duration of the service:</p>
-                <label id="-1hour-label" class="radio-label" for="servicea">
-                    <input id="-1hour" type="radio" name="duration" value="-1hour" class="input-radio">
-                    Less than an hour
-                </label>
-                <label id="1-2hours-label" class="radio-label" for="serviceb">
-                    <input id="1-2hours" type="radio" name="duration" value="1-2hours" class="input-radio">
-                    1-2 hours 
-                </label>
-                <label id="2-3hours-label" class="radio-label" for="serviceb">
-                    <input id="2-3hours" type="radio" name="duration" value="2-3hours" class="input-radio">
-                    2-3 hours 
-                </label>
-                <label id="3-4hours-label" class="radio-label" for="serviceb">
-                    <input id="3-4hours" type="radio" name="duration" value="3-4hours" class="input-radio">
-                    3-4 hours 
-                </label>
-                <label id="4-5hours-label" class="radio-label" for="serviceb">
-                    <input id="4-5hours" type="radio" name="duration" value="4-5hours" class="input-radio">
-                    4-5 hours 
-                </label>
-                <label id="+5hours-label" class="radio-label" for="serviceb">
-                    <input id="+5hours" type="radio" name="duration" value="+5hours" class="input-radio">
-                    More than 5 hours 
-                </label>
-            </div>
-            <div class="form-group">
-                <p class="bold">Additional services</p>
-                <p class="secundary-text">(Check the ones that interest you)</p>
-                <label id="printing-service-label" class="checkbox-label" for="printing-service">
-                    <input type="checkbox" id="printing-service" class="input-checkbox" value="printing-service" name="">
-                    Printing services
-                </label>
-                <label id="photo-editing-label" class="checkbox-label" for="photo-editing">
-                    <input type="checkbox" id="photo-editing" class="input-checkbox" value="photo-editing" name="">
-                    Photo editing
-                </label>
-                <label id="aerial-photography-label" class="checkbox-label" for="aerial-photography">
-                    <input type="checkbox" id="aerial-photography" class="input-checkbox" value="aerial-photography" name="">
-                    Aerial photography
-                </label>
-                
-            </div>
-            <div class="form-group">
-                <label id="user-message-label" class="bold" for="bio">Leave your message
-                    <textarea id="user-message" class="form-textarea" name="user-message" rows="10" cols="30" placeholder="Enter your message here..." optional></textarea>
-                </label>
-            </div>
-            <input id="submit" class="bold" type="submit" value="Submit">
-        </form>
+        </div>
     </main>
 </body>
 </html>
