@@ -4,54 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Johan Cruyff tribute page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <title>CSS Documentation</title>
 </head>
 <body>
-    <header>
-        <h1 id="title">Johan Cruyff</h1>
-        <p class="bold">The man who revolutionized football</p>
-    </header>
-    <main id="main">
-        <div class="presentation">
-            <div id="img-div" class="presentation">
-                <img id="image" src="https://tmssl.akamaized.net/images/foto/galerie/johan-cruijff-cruyff-ajax-1618234693-60657.jpg?lm=1618234893"
-                alt="Johan Cruyff">
-                <div id="img-caption">
-                    Johan Cruyff, the legendary Dutch footballer, wearing the Ajax Amsterdam shirt
-                </div>
-            </div>
-        </div>
-        <div id="tribute-info">
-            <h2>Johan Cruyff's timeline:</h2>
-            <ul class="timeline">
-                <li><span class="bold">1947</span> - On April 25, Johan Cruyff is born in Amsterdam, Netherlands.</li>
-                <li><span class="bold">1957</span> - Begins playing football at Ajax Amsterdam, the club where he would spend much of his career.</li>
-                <li><span class="bold">1964</span> - Makes his debut in the Dutch league with Ajax.</li>
-                <li><span class="bold">1971-1973</span> - Wins three consecutive Ballon d'Or awards.</li>
-                <li><span class="bold">1973</span> - Transfers to FC Barcelona for a record fee at the time.</li>
-                <li><span class="bold">1974</span> - Leads the Dutch national team to the World Cup final, where they would lose to Germany.</li>
-                <li><span class="bold">1978-1979</span> - Leads the Dutch national team to the World Cup final, where they would lose to Germany</li>
-                <li><span class="bold">1981-1983</span> - Plays for Levante in Spain and the Washington Diplomats in the United States before retiring from football.</li>
-                <li><span class="bold">1985-1988</span> - Begins his coaching career at Ajax Amsterdam.</li>
-                <li><span class="bold">1988</span> - Leads Ajax to win the UEFA Champions League.</li>
-                <li><span class="bold">1992</span> - Leads FC Barcelona to win their first UEFA Champions League as a coach.</li>
-                <li><span class="bold">1999-2011</span> - Works as a commentator and sports analyst on Dutch television.</li>
-                <li><span class="bold">2016</span> - Passes away from lung cancer.</li>
-            </ul>
-            <div class="citation">
-                <p>"Johan Cruyff was an elegant and creative player. He was an artist on the football field. His style 
-                    and technique were imitated by many young players. He was a true football genius, and his legacy 
-                    in the sport will always be remembered." - Pelé.</p>
-            </div>
-            <div class="divider"></div>
-            <div class="more-info">
-                <p class="bold" >If you're interested in learning more about the life and career of this iconic 
-                    player, we recommend visiting his 
-                    <a id="tribute-link" href="https://en.wikipedia.org/wiki/Johan_Cruyff" 
-                    target="_blank">Wikipedia entry</a>.
+    <nav id="navbar">
+        <header>CSS Documentation</header>
+        <button class="button-menu"> <!-- Button for the movile menu -->
+            <span class="material-symbols-outlined"> menu </span>
+        </button>
+        <ul class="menu">
+            <li>
+                <a id="firts-link" class="nav-link" href="#introduction">introduction</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#selectors">selectors</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#css_properties"><span class="uppercase">css</span> properties</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#page_layout">page layout</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#responsive_design">responsive design</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#reference">reference</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header class="bold">introduction</header>
+            <div class="info">
+                <p>
+                    CSS (Cascading Style Sheets) is a styling language used to describe how HTML elements 
+                    should be displayed on a webpage. It allows developers to separate content and structure 
+                    from presentation, making it possible to change a website's appearance without altering 
+                    its underlying HTML code.
+                </p>
+                <p>
+                    CSS is based on a box model, where each HTML element is treated as a rectangular box that 
+                    can be styled using different CSS properties, such as font size, color, background color, 
+                    margin, padding, and more. Selectors are used to target specific HTML elements and apply 
+                    styles to them.
+                </p>
+                <p>
+                    In summary, CSS is a crucial tool for creating modern and visually appealing websites. By 
+                    using CSS, developers can control the presentation of HTML elements, allowing them to create 
+                    customized and unique designs for their websites.
                 </p>
             </div>
-        </div>
+        </section>
+
+        <section class="main-section" id="selectors">
+            <header class="bold">selectors</header>
+            <div class="info">
+                <p>
+                    Selectors are a key component of CSS that allow you to target specific HTML elements and apply 
+                    styles to them. CSS provides several different types of selectors, including element selectors, 
+                    class selectors, ID selectors, attribute selectors, and pseudo-classes.
+                </p>
+                <p>
+                    Element selectors target elements based on their HTML tag name, such as "p" for paragraphs or "h1" 
+                    for top-level headings. Class selectors target elements based on their HTML class attribute, which 
+                    can be shared among multiple elements. ID selectors target elements based on their HTML ID attribute, 
+                    which should be unique to a single element on the page.
+                </p>
+                <code>
+                    h1 { <br>
+                    properties: value; <br>
+                    color: black; <br>
+                    }
+                </code>
+            </div>
+        </section>
+
+        <section class="main-section" id="css_properties">
+            <header class="bold"><span class="uppercase">css</span> properties</header>
+            <div class="info">
+                <p>
+                    CSS properties are attributes that developers use to style and format HTML elements on a webpage. 
+                    There are many CSS properties available, ranging from basic formatting properties such as color 
+                    and font-size to more advanced properties such as animation and transform. CSS properties can be 
+                    applied to HTML elements using selectors, and their values can be adjusted to achieve the desired 
+                    style and formatting.
+                </p>
+                <p>
+                    Learning about CSS properties is essential for web developers who want to create visually appealing 
+                    and functional webpages. By using CSS properties effectively, developers can make their webpages 
+                    more attractive and user-friendly. Resources such as the MDN "CSS Properties" page provide a 
+                    comprehensive reference to all CSS properties available, allowing developers to quickly and easily 
+                    find the information they need to create stunning webpages.
+                </p>
+            </div>
+        </section>
+
+        <section class="main-section" id="page_layout">
+            <header class="bold">page layout</header>
+            <div class="info">
+                <p>
+                    Page layout refers to the way that content is arranged on a webpage. Effective page layout is important 
+                    for creating a visually appealing and user-friendly website. There are many techniques that developers 
+                    can use to create effective page layouts, including using grids, white space, and color schemes to 
+                    create a cohesive and balanced design.
+                </p>
+                <p>
+                    Developers can use CSS properties such as display, position, and float to control the placement of 
+                    elements on a webpage. Responsive design techniques, such as using media queries, can also be used 
+                    to create layouts that adapt to different screen sizes and devices. By focusing on creating a 
+                    well-designed and functional page layout, developers can improve the overall user experience of 
+                    their website.
+                </p>
+            </div>
+        </section>
+
+        <section class="main-section" id="responsive_design">
+            <header class="bold">responsive design</header>
+            <div class="info">
+                <p>
+                    Responsive design is a technique used by web developers to create websites that adapt to different 
+                    screen sizes and devices. With the increasing use of smartphones and tablets, it has become 
+                    increasingly important for websites to be optimized for mobile devices. Responsive design achieves 
+                    this by using CSS media queries to adjust the layout, typography, and content of a webpage based 
+                    on the screen size of the device being used.
+                </p>
+                <p>
+                    Responsive design has many benefits, including improving the user experience, increasing website 
+                    traffic and engagement, and improving search engine optimization (SEO). By using responsive design 
+                    techniques, developers can ensure that their websites are accessible and user-friendly on all 
+                    devices, leading to increased user satisfaction and improved website performance.
+                </p>
+            </div>
+        </section>
+
+        <section class="main-section" id="reference">
+            <header class="bold">reference</header>
+            <div class="info">
+                <p>All the documentation in this page is taken from :</p>
+                <ul>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS" target="_blank">
+                            MDN
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS" target="_blank">
+                            W3S
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS" target="_blank">
+                            ChatGPT
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
+
+    <script>
+        // JavaScript
+        const menuButton = document.querySelector('.button-menu');
+        const menuLinks = document.querySelectorAll('.nav-link');
+
+        // Add an event to the button element to trigger when clicked:
+        menuButton.addEventListener('click', function () {
+            // Select an element by ID with getElementById:
+            document.querySelector('.menu').classList.toggle('active');
+        });
+
+        // Add an event to each "a" element in the menu:
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // Close the menu after 0.3 seconds
+                setTimeout(() => {
+                document.querySelector('.menu').classList.remove('active');
+                }, 300);
+            });
+        });
+	</script>
+
 </body>
 </html>
