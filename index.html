@@ -72,12 +72,38 @@
                     can be shared among multiple elements. ID selectors target elements based on their HTML ID attribute, 
                     which should be unique to a single element on the page.
                 </p>
-                <code>
-                    h1 { <br>
-                    properties: value; <br>
-                    color: black; <br>
-                    }
-                </code>
+                <div class="code-example">
+                    <p>Syntax</p>
+                    <code>
+                        <span class="selector">Selector</span> {<br>
+                        &nbsp;&nbsp;property: value;<br>
+                        }
+                    </code>
+                </div>
+                <div class="code-example">
+                    <p>Element Selector</p>
+                    <code>
+                        <span class="selector">p</span> {<br>
+                        &nbsp;&nbsp;property: value;<br>
+                        }
+                    </code>
+                </div>
+                <div class="code-example">
+                    <p>Class Selector</p>
+                    <code>
+                        <span class="selector">.blue-text</span> {<br>
+                        &nbsp;&nbsp;property: value;<br>
+                        }
+                    </code>
+                </div>
+                <div class="code-example">
+                    <p>ID Selector</p>
+                    <code>
+                        <span class="selector">#header</span> {<br>
+                        &nbsp;&nbsp;property: value;<br>
+                        }
+                    </code>
+                </div>
             </div>
         </section>
 
@@ -98,6 +124,36 @@
                     comprehensive reference to all CSS properties available, allowing developers to quickly and easily 
                     find the information they need to create stunning webpages.
                 </p>
+                <p>Here are some simple examples of CSS properties:</p>
+                <ul id="properties-list">
+                    <li>
+                        <p><span class="blue bold">font-size: </span>Defines the size of the text.</p>
+                    </li>
+                    <li>
+                        <p><span class="blue bold">color: </span>Sets the color of the text.</p>
+                    </li>
+                    <li>
+                        <p><span class="blue bold">background-color: </span>Specifies the background color of an element.</p>
+                    </li>
+                    <li>
+                        <p><span class="blue bold">margin: </span>Sets the space outside an element.</p>
+                    </li>
+                    <li>
+                        <p><span class="blue bold">padding: </span>Defines the space between the element's content and its border.</p>
+                    </li>
+                </ul>
+                <div class="code-example">
+                    <p>Properties example</p>
+                    <code>
+                        <span class="selector">h1</span> {<br>
+                        &nbsp;&nbsp;font-size: 18px;<br>
+                        &nbsp;&nbsp;color: blue;<br>
+                        &nbsp;&nbsp;background-color: black;<br>
+                        &nbsp;&nbsp;margin: 5px;<br>
+                        &nbsp;&nbsp;padding: 10px;<br>
+                        }
+                    </code>
+                </div>
             </div>
         </section>
 
@@ -136,6 +192,28 @@
                     techniques, developers can ensure that their websites are accessible and user-friendly on all 
                     devices, leading to increased user satisfaction and improved website performance.
                 </p>
+                <div class="code-example">
+                    <p>Example of a media query</p>
+                    <code>
+                        @media (max-width: 600px) { <br>
+                            &nbsp;&nbsp;<span class="selector">body</span> {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;font-size: 16px;<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;<span class="selector">.header</span> {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;display: none;<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;<span class="selector">.mobile-menu</span> {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;display: block;<br>
+                            &nbsp;&nbsp;}<br>
+                        }
+                    </code>
+                </div>
+                <p>
+                    This media query targets screens with a maximum width of 600px and applies different styles to the body, 
+                    .header, and .mobile-menu elements. In this example, the font size is increased to 16px, the header is 
+                    hidden, and the mobile menu is displayed. By using media queries like this, developers can create responsive 
+                    designs that adapt to different screen sizes and devices.
+                </p>
             </div>
         </section>
 
@@ -146,17 +224,17 @@
                 <ul>
                     <li>
                         <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS" target="_blank">
-                            MDN
+                            MDN (Mozilla Developer Network)
                         </a>
                     </li>
                     <li>
-                        <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS" target="_blank">
-                            W3S
+                        <a href="https://www.w3schools.com/css/" target="_blank">
+                            W3Schools
                         </a>
                     </li>
                     <li>
-                        <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS" target="_blank">
-                            ChatGPT
+                        <a href="https://github.com/openai/gpt-3" target="_blank">
+                            ChatGPT (OpenAI)
                         </a>
                     </li>
                 </ul>
