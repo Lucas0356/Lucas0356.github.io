@@ -250,3 +250,18 @@ code .selector{
         margin: 0 0.5rem;
     }
 }
+
+@media (max-width:380px) {
+    /* main styles */
+    #main-doc{
+        padding: 5px;
+    }
+    .info{
+        margin: 0;
+    }
+    /* code styles */
+    .code-example code{
+        padding: 1rem 5px;
+        font-size: 1rem;
+    }
+}
