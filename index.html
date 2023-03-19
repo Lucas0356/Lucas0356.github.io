@@ -262,6 +262,23 @@
                 }, 300);
             });
         });
+
+        // Selects the .menu element
+        const menu = document.querySelector('.menu');
+
+        // Function that runs when the window size changes
+        function updateMenu() {
+            if (window.innerWidth > 1000) {
+                menu.classList.remove('active');
+            }
+        }
+
+        // Runs the function when the page loads
+        updateMenu();
+
+        // Adds a listener for the resize event
+        window.addEventListener('resize', updateMenu);
+
 	</script>
 
 </body>
