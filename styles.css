@@ -178,8 +178,14 @@ p{
 
 code .selector{
     font-weight: bold;
-    color: #101010;
+    color:  #FFFF00;
 }
+
+code .value{
+    color:  #00FF00;
+}
+
+
 
 /* ************************************************** */
 /* span text styles */
