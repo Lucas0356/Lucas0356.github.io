@@ -198,26 +198,20 @@ div.slogan-container{
 /* newsletter section styles */
 
 #newsletter{
-    min-height: calc(100vh - 90px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
-}
-
-#newsletter > h3{
-    font-weight: bold;
-    font-size: 3rem;
-    color: #e5e0dc;
+    font-size: co;
 }
 
 #newsletter > p{
     width: 80%;
-    margin-top: 1rem;
-    font-size: 1.5rem;
+    font-weight: bold;
+    font-size: 2.5rem;
     color: #e5e0dc;
 }
 
@@ -233,6 +227,7 @@ div.slogan-container{
 #newsletter > form input{
     display: block;
     padding: 10px;
+    margin: 10px;
     border-radius: 5px;
     font-size: 1.2rem;
     border: 0;
@@ -241,12 +236,14 @@ div.slogan-container{
 }
 
 #newsletter > form input[type="email"]{
-    width: 650px;
+    width: 50%;
+    min-width: 250px;
 }
 
 #newsletter > form input[type="submit"]{
     margin-top: 2rem;
-    width: 400px;
+    width: 30%;
+    min-width: 250px;
     font-weight: bold;
     transition: background-color 0.3s ease;
     padding: 10px 20px;
@@ -270,15 +267,15 @@ div.slogan-container{
 }
 
 .features-list{
-    min-height: calc(100vh - 90px);
+    border: 1px solid red;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
 }
 
 .features-list li{
-    flex: 1;
-    width: 750px;
     gap: 0.2rem;
     display: flex;
     align-items: center;
@@ -412,9 +409,16 @@ div.slogan-container{
     #nav-bar{
         display: none;
     }
+    /* newslette section styles */
+    #newsletter > p{
+        width: 85%;
+    }
 }
 
 @media (max-width:1023px){ /* para tablets en modo horizontal y pantallas de computadoras pequeñas */
+    html{
+        font-size: 16px;
+    }
     /* slogan styles */
     div.slogan-container{
         background-size: content;
@@ -427,10 +431,14 @@ div.slogan-container{
     /* newslette section styles */
     #newsletter > p{
         width: 100%;
+        font-size: 2rem;
     }
 }
 
 @media (max-width:767px){ /* para dispositivos móviles más grandes y tablets en modo vertical */
+    html{
+        font-size: 16px;
+    }
     /* header styles */
     #header-img{
         margin-left: 1rem;
@@ -440,72 +448,24 @@ div.slogan-container{
     #header-title{
         font-size: 1.5rem;
     }
-    /* features section styles */
-    .features-list li{
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-    }
-    .features-list li span{
-        font-size: 6rem;
-        margin: 0;
-    }
-    /* newslette section styles */
-    #newsletter > form input[type="email"]{
-        width: 400px;
-    }
-    #newsletter > form input[type="submit"]{
-        width: 300px;
-    }
+    /* home section styles */
 }
 
 @media (max-width:480px){ /*  dispositivos móviles pequeños */
-    html{
-        font-size: 16px;
-    }
     /* features section styles */
     .features-list li span{
-        font-size: 4rem;
-    }
-    /* newslette section styles */
-    #newsletter > h3{
-        font-size: 2rem;
-    }
-    #newsletter > p{
-        font-size: 1.2rem;
-    }
-    #newsletter form input{
-        font-size: 1.2rem;
-    }
-    #newsletter > form input[type="email"]{
-        width: 250px;
-    }
-    #newsletter > form input[type="submit"]{
-        width: 200px;
+        margin: 0 1rem 0 0;
     }
 }
 
-@media (max-width:300px){
-    /* features section styles */
+/* @media (max-width:280px){
+    .features-list li{
+        padding: 1rem 0.2rem;
+    }
     .features-list li span{
-        font-size: 4rem;
+        font-size: 3rem;
     }
-    /* newslette section styles */
-    #newsletter > h3{
-        font-size: 1.5rem;
+    .features-list li .info h3{
+        font-size: 1.2rem;
     }
-    #newsletter > p{
-        font-size: 1rem;
-    }
-    #newsletter form input{
-        font-size: 1rem;
-    }
-    #newsletter > form input[type="email"]{
-        width: 250px;
-    }
-    #newsletter > form input[type="submit"]{
-        width: 200px;
-    }
-}
+} */
