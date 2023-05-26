@@ -1,511 +1,281 @@
+/* ************************************************** */
+/* import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
 
-/* Google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;600&family=Poppins:wght@300;400;600&display=swap');
-
-/* general styles */
+/* ************************************************** */
+/* generals styles */
 
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-html {
-    font-size: 18px;
+/* ************************************************** */
+/* font-size and scroll*/
+
+html{
+    font-size: 17px;
     scroll-behavior: smooth;
 }
 
-/* #######################################################################
-####################################################################### */
-
+/* ************************************************** */
 /* body styles */
 
-body {
-    background-color: #220904;
-    font-family: 'Poppins', sans-serif;
+body{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
+    flex-wrap: wrap;
+    font-family: Poppins, sans-serif;
+    background-color: #fffefe;
 }
 
-/* #######################################################################
-####################################################################### */
+/* ************************************************** */
+/* navbar styles */
 
-/* header styles */
-
-#header{
-    height: 90px;
-    width: 100%;
-    z-index: 2;
+#navbar{
+    background-color: #245ca8;
+    width: 300px;
+    height: 100%;
     position: fixed;
-    top: 0;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    background-color: #220904;
-    color: #e5e0dc;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
-#header-img{
-    margin-left: 1rem;
-    margin-right: 1rem;
-    width: 80px;
-}
-
-#header-title{
-    font-family: 'Edu NSW ACT Foundation', cursive;
-    font-size: 1.8rem;
+#navbar header{
+    font-weight: 500;
     text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #fffefe;
 }
 
-/* menu button styles */
-.menu-button{
-    margin-left: auto;
-    padding: 10px;
-    border: 0;
-    background-color:  transparent;
-    color: #e5e0dc;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu-button span{
-    font-size: 2rem;
-}
-
-/* #######################################################################
-####################################################################### */
-
-/* navbar */
-
-#nav-bar{
-    margin-left: auto;
-}
-
-#nav-bar ul{
-    display: flex;
+#navbar ul{
     list-style: none;
 }
 
-#nav-bar ul li a{
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #e5e0dc;
-    padding: 20px 15px;
-    margin: 0.5rem;
-    transition: background-color 0.3s ease;
-}
-
-#nav-bar ul li a:hover{
-    background-color: #e5e0dc;
-    color: #000000;
-}
-
-#nav-bar.active{ /* for smaller screens */
+.menu.active{ /* for smaller screens */
     display: block;
     position: fixed;
     top: 90px;
     left: 0;
     width: 100%;
-    background-color: #220904;
-    color: #220904;
+    background-color: #245ca8;
 }
 
-#nav-bar.active ul{
-    flex-direction: column;
-    width: 100%;
-}
-
-#nav-bar.active ul li a{
+.menu li a{
     display: block;
+    padding: 1rem;
     font-size: 1.2rem;
-    font-weight: bold;
     text-decoration: none;
-    color: #e5e0dc;
-    padding: 20px 10px;
-    margin: inherit;
-    transition: background-color 0.3s ease;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #b5b5b5;
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
 }
 
-#nav-bar.active ul li:last-child{
-    border-bottom: 1px solid #e5e0dc;
+#firts-link{
+    border-top: 2px solid #fffefe;
 }
 
-#nav-bar.active ul li a:hover{
-    background-color: #e5e0dc;
-    color: #220904;
-}
-
-/* #######################################################################
-####################################################################### */
-
-/* main styles */
-
-main{
-    margin-top: 90px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    width: 100%;
-    color: #ffffff;
-}
-
-main section{
-    scroll-margin-top: 90px;
-}
-
-/* #######################################################################
-####################################################################### */
-
-/* home styles */
-
-#home{
-    width: 100%;
-}
-
-div.slogan-container{
-    height: calc(100vh - 90px);
-    width: 100%;
-    background-image: url(images/coffe-background.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    position: relative;
-    z-index: 1;
-}
-
-.slogan{
-    max-width: 100%; /* Asegura que el h2 no se extienda más allá del ancho del elemento contenedor */
-    position: absolute;
-    top: 5%;
-    padding: 0 10px;
-    width: 70%;
-    font-size: 3.5rem;
-    color: #ffffff;
-}
-
-/* #######################################################################
-####################################################################### */
-
-/* newsletter section styles */
-
-#newsletter{
-    min-height: calc(100vh - 90px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 1rem;
-    text-align: center;
-}
-
-#newsletter > h3{
-    font-weight: bold;
-    font-size: 3rem;
-    color: #e5e0dc;
-}
-
-#newsletter > p{
-    width: 80%;
-    margin-top: 1rem;
-    font-size: 1.5rem;
-    color: #e5e0dc;
-}
-
-#newsletter > form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 2rem;
-}
-
-#newsletter > form input{
-    display: block;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    border: 0;
-    background-color: #e5e0dc;
-    color: #220904;
-}
-
-#newsletter > form input[type="email"]{
-    width: 650px;
-}
-
-#newsletter > form input[type="submit"]{
-    margin-top: 2rem;
-    width: 400px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-#newsletter > form input[type="submit"]:hover{
-    cursor: pointer;
-    background-color: #bdbdbd;
-    color: #000000;
-}
-
-/* #######################################################################
-####################################################################### */
-
-/* features section styles */
-
-#features{
-    background-color: #e5e0dc;
-    width: 100%;
-}
-
-.features-list{
-    min-height: calc(100vh - 90px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.features-list li{
-    flex: 1;
-    width: 750px;
-    gap: 0.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    color: #220904;
-    padding: 1rem;
-    border-bottom: 1px solid #220904;
-}
-
-.features-list li:last-child{
-    border-bottom: 0;
-}
-
-.features-list li span{
-    font-size: 4.5rem;
-    margin: 2rem 2.5rem 2rem 0;
-    font-weight: bold;
-}
-
-.features-list li .info h3{
-    font-size: 1.5rem;
-}
-
-.features-list li .info p{
-    font-weight: bold;
-    display: block;
-}
-
-/* #######################################################################
-####################################################################### */
-
-/* products section styles */
-
-#products{
-    min-height: calc(100vh - 90px);
-    width: 100%;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#video{
-    max-width: 80%;
-}
-
-/* #######################################################################
-####################################################################### */
-
-/* pricing section styles */
-
-#pricing{
-    background-color: #e5e0dc;
-    min-height: calc(100vh - 90px);
-    width: 100%;
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch; /* ajusta la altura de los elementos */
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-.product {
-    flex: 1;
-    max-height: 90%;
-    min-width: 270px;
-    border-radius: 0.5rem;
-    border: 1px solid #220904;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    color: #220904;
-}
-
-.product .name{
-    width: 100%;
-    height: 10%;
-    background-color: #220904;
-    color: #e5e0dc;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    border-radius: 0.5rem 0.5rem 0  0;
-}
-
-.price{
-    font-size: 2rem;
-}
-
-.info-product{
-    list-style-position: inside;
-    padding: 0.5rem;
-    text-align: left;
-    width: 80%;
-}
-
-.btn-select{
-    border-radius: 0  0 0.5rem 0.5rem;
-    font-size: 1rem;
-    padding: 0.5rem;
-    border: 0;
-    font-weight: bold;
-    width: 100%;
-    height: 10%;
-    cursor: pointer;
-    background-color: #220904;
-    color: #e5e0dc;
+#navbar ul li a:hover{
+    border-bottom: 2px solid #fffefe;
+    border-top: 2px solid #fffefe;
+    color: #fffefe;
 }
 
 /* ************************************************** */
+/* main styles */
+
+#main-doc{
+    margin-left: 300px;
+    padding: 2rem;
+}
+
+/* ************************************************** */
+/* sections styles */
+
+.main-section{
+    margin-top: 2rem;
+    font-weight: bold;
+    scroll-margin-top: 2rem;
+}
+
+.main-section:first-of-type{
+    margin-top: 0;
+}
+
+header{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+/* ************************************************** */
+/* info styles */
+
+.info{
+    margin-left: 2rem;
+    color: #3d464f;
+}
+
+p{
+    font-size: 1rem;
+    padding: 10px;
+    font-weight: 500;
+}
+
+/* list styles */
+
+#properties-list{
+    list-style:disc;
+    color: #245ca8;
+}
+
+#properties-list p{
+    color: #3d464f;
+    padding: 5px;
+}
+
+.info ul{
+    margin-left: 2rem;
+    list-style: "-";
+}
+
+.info ul li a{
+    color: #3d464f;
+    text-decoration: none;
+    margin: 1rem;
+}
+
+.info ul li a:hover{
+    color: #245ca8;
+}
+
+/* ************************************************** */
+/* code styles */
+
+.code-example{
+    background-color: #245ca8;
+    border-radius: 10px;
+    margin: 1rem 0.5rem ;
+    color: #fffefe;
+}
+
+.code-example code{
+    display: block;
+    text-align: left;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.code-example p{
+    background-color: #1b447c;
+    border-radius: 10px 10px 0 0;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+}
+
+code .selector{
+    font-weight: bold;
+    color:  #FFFF00;
+}
+
+code .value{
+    color:  #00FF00;
+}
+
+
+/* ************************************************** */
+/* span text styles */
+
+.blue{
+    color: #245ca8;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
 /* ************************************************** */
 /* media queries */
 
-@media (min-width:1200px) {
+@media (min-width:1000px) {
     /* navbar styles */
-    .menu-button{
+    .button-menu{
         display: none;
     }
 }
 
-/* ************************************************** */
-
-@media (max-width:1199px){ /* para pantallas de computadoras medianas y grandes */
-    /* header styles */
-    #nav-bar{
-        display: none;
-    }
-}
-
-@media (max-width:1023px){ /* para tablets en modo horizontal y pantallas de computadoras pequeñas */
-    /* slogan styles */
-    div.slogan-container{
-        background-size: content;
-        background-position: 60%;
-    }
-    .slogan{
-        font-size: 2.3rem;
-        width: 95%;
-    }
-    /* newslette section styles */
-    #newsletter > p{
-        width: 100%;
-    }
-}
-
-@media (max-width:767px){ /* para dispositivos móviles más grandes y tablets en modo vertical */
-    /* header styles */
-    #header-img{
-        margin-left: 1rem;
-        margin-right: 0.5rem;
-        width: 60px;
-    }
-    #header-title{
-        font-size: 1.5rem;
-    }
-    /* features section styles */
-    .features-list li{
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-    }
-    .features-list li span{
-        font-size: 6rem;
-        margin: 0;
-    }
-    /* newslette section styles */
-    #newsletter > form input[type="email"]{
-        width: 400px;
-    }
-    #newsletter > form input[type="submit"]{
-        width: 300px;
-    }
-}
-
-@media (max-width:480px){ /*  dispositivos móviles pequeños */
+@media (max-width:1000px) {
     html{
         font-size: 16px;
     }
-    /* features section styles */
-    .features-list li span{
-        font-size: 4rem;
+    /* navbar styles */
+    #navbar{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        height: 90px;
     }
-    /* newslette section styles */
-    #newsletter > h3{
+    #navbar header{
+        text-align: left;
+    }
+    /* menu styles */
+    .menu{
+        display: none;
+    }
+    /* button styles */
+    .button-menu{
+        margin-left: auto;
+        padding: 10px;
+        border: 0;
+        background-color:  transparent;
+        color: #fffefe;
+        cursor: pointer;
+        display: flex;
+        align-content: center;
+        align-items: center;
+    }
+    .button-menu span{
         font-size: 2rem;
     }
-    #newsletter > p{
-        font-size: 1.2rem;
+    /* main styles */
+    #main-doc{
+        margin-left: inherit;
+        margin-top: 90px;
+        padding: 1rem;
     }
-    #newsletter form input{
-        font-size: 1.2rem;
+    .main-section{
+        scroll-margin-top: calc(90px + 1rem);
     }
-    #newsletter > form input[type="email"]{
-        width: 250px;
-    }
-    #newsletter > form input[type="submit"]{
-        width: 200px;
+    .info{
+        margin: 0 0.5rem;
     }
 }
 
-@media (max-width:300px){
-    /* features section styles */
-    .features-list li span{
-        font-size: 4rem;
+@media (max-width:380px) {
+    /* navbar styles */
+    #navbar header{
+        font-weight: 500;
+        padding: 0.5rem;
+        font-size: 1.3rem;
     }
-    /* newslette section styles */
-    #newsletter > h3{
-        font-size: 1.5rem;
+    /* main styles */
+    #main-doc{
+        padding: 5px;
     }
-    #newsletter > p{
+    .info{
+        margin: 0;
+    }
+    /* code styles */
+    .code-example code{
+        padding: 1rem 5px;
         font-size: 1rem;
-    }
-    #newsletter form input{
-        font-size: 1rem;
-    }
-    #newsletter > form input[type="email"]{
-        width: 250px;
-    }
-    #newsletter > form input[type="submit"]{
-        width: 200px;
     }
 }

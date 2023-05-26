@@ -1,147 +1,256 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <title>CSS Documentation</title>
 </head>
 <body>
-    <header id="header">
-        <img id="header-img" src="images/logo.png" alt="logo">
-        <h1 id="header-title">Coffee Gurus</h1>
-        <button class="menu-button"> <!-- Button for the movile menu -->
+    <nav id="navbar">
+        <header>CSS Documentation</header>
+        <button class="button-menu"> <!-- Button for the movile menu -->
             <span class="material-symbols-outlined"> menu </span>
         </button>
-        <nav id="nav-bar">
-            <ul class="menu">
-                <li>
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#newsletter">Newsletter</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#features">Features</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#products">Products</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#pricing">Pricing</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-            <div class="slogan-container">
-                <h2 class="slogan">Elevate your coffee game with our machines.</h2>
+        <ul class="menu">
+            <li>
+                <a id="firts-link" class="nav-link" href="#introduction">introduction</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#selectors">selectors</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#css_properties"><span class="uppercase">css</span> properties</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#page_layout">page layout</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#responsive_design">responsive design</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#reference">reference</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="introduction">
+            <header class="bold">introduction</header>
+            <div class="info">
+                <p>
+                    CSS (Cascading Style Sheets) is a styling language used to describe how HTML elements 
+                    should be displayed on a webpage. It allows developers to separate content and structure 
+                    from presentation, making it possible to change a website's appearance without altering 
+                    its underlying HTML code.
+                </p>
+                <p>
+                    CSS is based on a box model, where each HTML element is treated as a rectangular box that 
+                    can be styled using different CSS properties, such as font size, color, background color, 
+                    margin, padding, and more. Selectors are used to target specific HTML elements and apply 
+                    styles to them.
+                </p>
+                <p>
+                    In summary, CSS is a crucial tool for creating modern and visually appealing websites. By 
+                    using CSS, developers can control the presentation of HTML elements, allowing them to create 
+                    customized and unique designs for their websites.
+                </p>
             </div>
         </section>
-        <section id="newsletter">
-            <h3>Subscribe To Newsletter</h3>
-            <p>
-                Stay up to date with the latest news and updates from our website by subscribing to 
-                our newsletter. We'll send you our best offers and discounts straight to your inbox.
-            </p>
-            <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
-                <input id="email" type="email" name="email" placeholder="Enter your email address">
-                <input id="submit" type="submit" value="Submit">
-            </form>
-        </section>
-        <section id="features">
-            <ul class="features-list">
-                <li>
-                    <span class="material-symbols-outlined">
-                        coffee_maker
-                    </span>
-                    <div class="info">
-                        <h3>User-friendly</h3>
-                        <p>
-                            Our machines are easy to use, and you'll be making espresso like a pro in no time.
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <span class="material-symbols-outlined">
-                        local_shipping
-                    </span>
-                    <div class="info">
-                        <h3>Free shipping</h3>
-                        <p>
-                            All orders come with free shipping anywhere in the country.
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <span class="material-symbols-outlined">
-                        verified_user
-                    </span>
-                    <div class="info">
-                        <h3>Warranty included</h3>
-                        <p>
-                            All of our machines come with a satisfaction guarantee warranty.
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <section id="products">
-            <h3>What is the ideal espresso machine for your needs?</h3>
-            <p>In the following video, you will find a comparison of the different products we offer.</p>
-            <iframe id="video" src="https://www.youtube.com/embed/kCqYOET6RsE" title="YouTube video player"
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-            </iframe>
-        </section>
-        <section id="pricing">
-            <div class="product">
-                <div class="name">Smart Espresso Machine</div>
-                <h3 class="price">$150</h3>
-                <ul class="info-product">
-                    <li>Smartphone connectivity</li>
-                    <li>Touch screen for coffee preparation customization</li>
-                    <li>High-pressure pump</li>
-                    <li>Modern design</li>
-                </ul>
-                <button class="btn-select">Select</button>
+
+        <section class="main-section" id="selectors">
+            <header class="bold">selectors</header>
+            <div class="info">
+                <p>
+                    Selectors are a key component of CSS that allow you to target specific HTML elements and apply 
+                    styles to them. CSS provides several different types of selectors, including element selectors, 
+                    class selectors, ID selectors, attribute selectors, and pseudo-classes.
+                </p>
+                <p>
+                    Element selectors target elements based on their HTML tag name, such as "p" for paragraphs or "h1" 
+                    for top-level headings. Class selectors target elements based on their HTML class attribute, which 
+                    can be shared among multiple elements. ID selectors target elements based on their HTML ID attribute, 
+                    which should be unique to a single element on the page.
+                </p>
+                <div class="code-example">
+                    <p>Syntax</p>
+                    <code>
+                        <span class="selector">Selector</span> {<br>
+                        &nbsp;&nbsp;property: <span class="value">value</span>;<br>
+                        }
+                    </code>
+                </div>
+                <div class="code-example">
+                    <p>Element Selector</p>
+                    <code>
+                        <span class="selector">p</span> {<br>
+                        &nbsp;&nbsp;property: <span class="value">value</span>;<br>
+                        }
+                    </code>
+                </div>
+                <div class="code-example">
+                    <p>Class Selector</p>
+                    <code>
+                        <span class="selector">.blue-text</span> {<br>
+                        &nbsp;&nbsp;property: <span class="value">value</span>;<br>
+                        }
+                    </code>
+                </div>
+                <div class="code-example">
+                    <p>ID Selector</p>
+                    <code>
+                        <span class="selector">#header</span> {<br>
+                        &nbsp;&nbsp;property: <span class="value">value</span>;<br>
+                        }
+                    </code>
+                </div>
             </div>
-            <div class="product">
-                <div class="name">Travel Espresso Maker</div>
-                <h3 class="price">$150</h3>
-                <ul class="info-product">
-                    <li>Portable and compact design</li>
-                    <li>High-pressure extraction system</li>
-                    <li>Easy to use and clean</li>
-                    <li>Durable materials</li>
+        </section>
+
+        <section class="main-section" id="css_properties">
+            <header class="bold"><span class="uppercase">css</span> properties</header>
+            <div class="info">
+                <p>
+                    CSS properties are attributes that developers use to style and format HTML elements on a webpage. 
+                    There are many CSS properties available, ranging from basic formatting properties such as color 
+                    and font-size to more advanced properties such as animation and transform. CSS properties can be 
+                    applied to HTML elements using selectors, and their values can be adjusted to achieve the desired 
+                    style and formatting.
+                </p>
+                <p>
+                    Learning about CSS properties is essential for web developers who want to create visually appealing 
+                    and functional webpages. By using CSS properties effectively, developers can make their webpages 
+                    more attractive and user-friendly. Resources such as the MDN "CSS Properties" page provide a 
+                    comprehensive reference to all CSS properties available, allowing developers to quickly and easily 
+                    find the information they need to create stunning webpages.
+                </p>
+                <p>Here are some simple examples of CSS properties:</p>
+                <ul id="properties-list">
+                    <li>
+                        <p><span class="blue bold">font-size: </span>Defines the size of the text.</p>
+                    </li>
+                    <li>
+                        <p><span class="blue bold">color: </span>Sets the color of the text.</p>
+                    </li>
+                    <li>
+                        <p><span class="blue bold">background-color: </span>Specifies the background color of an element.</p>
+                    </li>
+                    <li>
+                        <p><span class="blue bold">margin: </span>Sets the space outside an element.</p>
+                    </li>
+                    <li>
+                        <p><span class="blue bold">padding: </span>Defines the space between the element's content and its border.</p>
+                    </li>
                 </ul>
-                <button class="btn-select">Select</button>
+                <div class="code-example">
+                    <p>Properties example</p>
+                    <code>
+                        <span class="selector">h1</span> {<br>
+                        &nbsp;&nbsp;font-size: <span class="value">18px</span>;<br>
+                        &nbsp;&nbsp;color: <span class="value">blue</span>;<br>
+                        &nbsp;&nbsp;background-color: <span class="value">black</span>;<br>
+                        &nbsp;&nbsp;margin: <span class="value">5px</span>;<br>
+                        &nbsp;&nbsp;padding: <span class="value">10px</span>;<br>
+                        }
+                    </code>
+                </div>
             </div>
-            <div class="product">
-                <div class="name">Premium Espresso Machine</div>
-                <h3 class="price">$250</h3>
-                <ul class="info-product">
-                    <li>High-quality materials</li>
-                    <li>19-bar pressure pump</li>
-                    <li>Elegant and sophisticated design</li>
-                    <li>Includes premium accessories</li>
-                    <li>Personalization of coffee preparation</li>
+        </section>
+
+        <section class="main-section" id="page_layout">
+            <header class="bold">page layout</header>
+            <div class="info">
+                <p>
+                    Page layout refers to the way that content is arranged on a webpage. Effective page layout is important 
+                    for creating a visually appealing and user-friendly website. There are many techniques that developers 
+                    can use to create effective page layouts, including using grids, white space, and color schemes to 
+                    create a cohesive and balanced design.
+                </p>
+                <p>
+                    Developers can use CSS properties such as display, position, and float to control the placement of 
+                    elements on a webpage. Responsive design techniques, such as using media queries, can also be used 
+                    to create layouts that adapt to different screen sizes and devices. By focusing on creating a 
+                    well-designed and functional page layout, developers can improve the overall user experience of 
+                    their website.
+                </p>
+            </div>
+        </section>
+
+        <section class="main-section" id="responsive_design">
+            <header class="bold">responsive design</header>
+            <div class="info">
+                <p>
+                    Responsive design is a technique used by web developers to create websites that adapt to different 
+                    screen sizes and devices. With the increasing use of smartphones and tablets, it has become 
+                    increasingly important for websites to be optimized for mobile devices. Responsive design achieves 
+                    this by using CSS media queries to adjust the layout, typography, and content of a webpage based 
+                    on the screen size of the device being used.
+                </p>
+                <p>
+                    Responsive design has many benefits, including improving the user experience, increasing website 
+                    traffic and engagement, and improving search engine optimization (SEO). By using responsive design 
+                    techniques, developers can ensure that their websites are accessible and user-friendly on all 
+                    devices, leading to increased user satisfaction and improved website performance.
+                </p>
+                <div class="code-example">
+                    <p>Example of a media query</p>
+                    <code>
+                        @media (max-width: 600px) { <br>
+                            &nbsp;&nbsp;<span class="selector">body</span> {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;font-size: <span class="value">16px</span>;<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;<span class="selector">.header</span> {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;display: <span class="value">none</span>;<br>
+                            &nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;<span class="selector">.mobile-menu</span> {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;display: <span class="value">block</span>;<br>
+                            &nbsp;&nbsp;}<br>
+                        }
+                    </code>
+                </div>
+                <p>
+                    This media query targets screens with a maximum width of 600px and applies different styles to the body, 
+                    .header, and .mobile-menu elements. In this example, the font size is increased to 16px, the header is 
+                    hidden, and the mobile menu is displayed. By using media queries like this, developers can create responsive 
+                    designs that adapt to different screen sizes and devices.
+                </p>
+            </div>
+        </section>
+
+        <section class="main-section" id="reference">
+            <header class="bold">reference</header>
+            <div class="info">
+                <p>All the documentation in this page is taken from:</p>
+                <ul>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/What_is_CSS" target="_blank">
+                            MDN (Mozilla Developer Network)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com/css/" target="_blank">
+                            W3Schools
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://openai.com/blog/chatgpt" target="_blank">
+                            ChatGPT (OpenAI)
+                        </a>
+                    </li>
                 </ul>
-                <button class="btn-select">Select</button>
             </div>
         </section>
     </main>
+
     <script>
         // JavaScript
-        const menuButton = document.querySelector('.menu-button');
+        const menuButton = document.querySelector('.button-menu');
         const menuLinks = document.querySelectorAll('.nav-link');
 
         // Add an event to the button element to trigger when clicked:
         menuButton.addEventListener('click', function () {
             // Select an element by ID with getElementById:
-            document.querySelector('#nav-bar').classList.toggle('active');
+            document.querySelector('.menu').classList.toggle('active');
         });
 
         // Add an event to each "a" element in the menu:
@@ -149,27 +258,28 @@
             link.addEventListener('click', function() {
                 // Close the menu after 0.3 seconds
                 setTimeout(() => {
-                document.querySelector('#nav-bar').classList.remove('active');
+                document.querySelector('.menu').classList.remove('active');
                 }, 300);
             });
         });
 
         // Selects the .menu element
-        const navbar = document.querySelector('#nav-bar');
+        const menu = document.querySelector('.menu');
 
         // Function that runs when the window size changes
-        function updateNavbar() {
+        function updateMenu() {
             if (window.innerWidth > 1000) {
-                navbar.classList.remove('active');
+                menu.classList.remove('active');
             }
         }
 
         // Runs the function when the page loads
-        updateNavbar();
+        updateMenu();
 
         // Adds a listener for the resize event
-        window.addEventListener('resize', updateNavbar);
+        window.addEventListener('resize', updateMenu);
 
-    </script>
+	</script>
+
 </body>
 </html>
