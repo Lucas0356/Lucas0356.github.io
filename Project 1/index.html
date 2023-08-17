@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="material-symbols-outlined">
+                photo_camera
+            </span>
+        </div>
+        <h1 id="title">Snapshot Studios</h1>
+        <p id="description">Capturing your most precious moments</p>
+        <p class="secundary-text">Contact us today to schedule your photo session.</p>
+    </header>
+    <main>
+        <form id="survey-form">
+            <div class="form-group">
+                <label class="bold" id="name-label" for="name">
+                    Name:
+                    <input type="text" id="name" class="form-input" name="name" placeholder="Enter your name" required>
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="bold" id="email-label" for="email">
+                    Email:
+                    <input id="email" class="form-input" name="email" type="email" placeholder="Enter your Email" required>
+                </label>
+            </div>
+            <div class="form-group">
+                <p class="bold">Type of event:</p>
+                <label id="dropdown-label" for="dropdown">
+                    <select id="dropdown" class="form-select" name="type-event" required>
+                        <option disabled selected value>(Select one)</option>
+                        <option value="wedding">Wedding</option>
+                        <option value="birthday">Birthday</option>
+                        <option value="family-sessions">Family sessions</option>
+                        <option value="corporate-events">Corporate events</option>
+                        <option value="sports-events">Sports events</option>
+                        <option value="concerts">Concerts</option>
+                        <option value="festivals">Festivals</option>
+                        <option value="nature-photography">Nature photography</option>
+                        <option value="other-event">Other</option>
+                    </select>
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="bold" id="date-label" for="date">Event date:
+                    <input id="date" class="form-input" name="event-date" type="date" min="2023-03-06" max="2024-12-31" required>
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="bold" id="time-event-label" for="hour">Time of the event:
+                    <input id="time-event" class="form-input" name="event-hour" type="time" required>
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="bold" id="location-label" for="location">
+                    Address of the event:
+                    <input id="location" class="form-input" name="location" type="text" placeholder="Enter the address" required>
+                </label>
+            </div>
+            <div class="form-group">
+                <label class="bold" id="number-label" for="number">
+                    Number of photographers needed:
+                    <input id="number" class="form-input" name="photographers" type="number" placeholder="(max 10)"
+                    min="1" max="10" required>
+                </label>
+            </div>
+            <div class="form-group">
+                <p class="bold">Duration of the service:</p>
+                <label id="-1hour-label" class="radio-label" for="servicea">
+                    <input id="-1hour" type="radio" name="duration" value="-1hour" class="input-radio">
+                    Less than an hour
+                </label>
+                <label id="1-2hours-label" class="radio-label" for="serviceb">
+                    <input id="1-2hours" type="radio" name="duration" value="1-2hours" class="input-radio">
+                    1-2 hours 
+                </label>
+                <label id="2-3hours-label" class="radio-label" for="serviceb">
+                    <input id="2-3hours" type="radio" name="duration" value="2-3hours" class="input-radio">
+                    2-3 hours 
+                </label>
+                <label id="3-4hours-label" class="radio-label" for="serviceb">
+                    <input id="3-4hours" type="radio" name="duration" value="3-4hours" class="input-radio">
+                    3-4 hours 
+                </label>
+                <label id="4-5hours-label" class="radio-label" for="serviceb">
+                    <input id="4-5hours" type="radio" name="duration" value="4-5hours" class="input-radio">
+                    4-5 hours 
+                </label>
+                <label id="+5hours-label" class="radio-label" for="serviceb">
+                    <input id="+5hours" type="radio" name="duration" value="+5hours" class="input-radio">
+                    More than 5 hours 
+                </label>
+            </div>
+            <div class="form-group">
+                <p class="bold">Additional services</p>
+                <p class="secundary-text">(Check the ones that interest you)</p>
+                <label id="printing-service-label" class="checkbox-label" for="printing-service">
+                    <input type="checkbox" id="printing-service" class="input-checkbox" value="printing-service" name="">
+                    Printing services
+                </label>
+                <label id="photo-editing-label" class="checkbox-label" for="photo-editing">
+                    <input type="checkbox" id="photo-editing" class="input-checkbox" value="photo-editing" name="">
+                    Photo editing
+                </label>
+                <label id="aerial-photography-label" class="checkbox-label" for="aerial-photography">
+                    <input type="checkbox" id="aerial-photography" class="input-checkbox" value="aerial-photography" name="">
+                    Aerial photography
+                </label>
+                
+            </div>
+            <div class="form-group">
+                <label id="user-message-label" class="bold" for="bio">Leave your message
+                    <textarea id="user-message" class="form-textarea" name="user-message" rows="10" cols="30" placeholder="Enter your message here..." optional></textarea>
+                </label>
+            </div>
+            <input id="submit" class="bold" type="submit" value="Submit">
+        </form>
+    </main>
+</body>
+</html>

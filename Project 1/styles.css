@@ -1,0 +1,215 @@
+/* import the Montserrat font  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+
+/* **************************************************** */
+/* generals styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 18px;
+}
+
+/* **************************************************** */
+/* Body styles */
+
+body{
+    background-color: #1e274b;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1rem;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* **************************************************** */
+/* header styles */
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    color: #e3ecf6;
+}
+
+/* **************************************************** */
+/* Title and description styles */
+
+#title, #description {
+    text-align: center;
+}
+
+#title{
+    color: #91a0fa;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+#description{
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+    width: 60%;
+    min-width: 260px;
+    max-width: 700px;
+}
+
+header p.secundary-text{
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* **************************************************** */
+/* logo styles */
+
+.logo span{
+    color: #91a0fa;
+    border-radius: 50%;
+    padding: 10px;
+    margin-bottom: 0.5rem;
+    border: 2px solid #91a0fa;
+    font-size: 3rem;
+}
+
+/* **************************************************** */
+/* main styles */
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* **************************************************** */
+/* Form styles */
+
+#survey-form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 2rem; 
+    border-radius: 0.25rem;
+    background-color: #505eaa;
+    color: #140f07;
+    width: 60%;
+    min-width: 260px;
+    max-width: 700px;
+    font-size: 1rem;
+}
+
+.form-group{
+    margin: 0.5rem 0;
+}
+
+label {
+    margin: 0.5rem 0;
+}
+
+input, textarea, select {
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    border: none;
+    margin: 10px 0;
+    height: 2.5rem;
+    font-size: 1rem;
+    color: #1e274b;
+    background-color: #e3ecf6;
+}
+
+input::placeholder, textarea::placeholder, select::placeholder {
+    color: #1e274b;
+}
+
+.form-input, .form-textarea, .form-select{
+    width: 100%;
+}
+
+
+/* **************************************************** */
+/* radio and checkbox styles */
+
+.input-radio, .input-checkbox {
+    height: 1.25rem;
+    width: 1.25rem;
+    margin: 0 0.5rem 0 0;
+}
+
+.radio-label, .checkbox-label{
+    display: flex;
+}
+
+/* **************************************************** */
+/* textarea styles */
+
+textarea{
+    display: block;
+    min-height: 150px;
+    width: 100%;
+    resize: vertical;
+}
+
+/* **************************************************** */
+/* submit button styles */
+
+input[type="submit"]{
+    background-color: #91a0fa;
+    color: #140f07;
+    font-size: 1.1rem;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+}
+
+/* **************************************************** */
+/* bold text */
+
+.bold{
+    font-weight: bold;
+}
+
+/* **************************************************** */
+/* secundary text */
+
+.secundary-text{
+    font-size: 0.8rem;
+}
+
+/* **************************************************** */
+/* media queries */
+
+@media (max-width: 910px) {
+    html{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 700px) {
+    #survey-form{
+        width: inherit;
+    }
+    #title{
+        font-size: 1.8rem;
+    }
+    
+    #description{
+        font-size: 1rem;
+    }
+    .logo span{
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 910px) {
+    #title{
+        font-size: 2.5rem;
+    }
+}

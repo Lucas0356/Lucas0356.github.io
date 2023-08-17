@@ -1,0 +1,600 @@
+
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400;600&family=Poppins:wght@300;400;600&display=swap');
+
+/* general styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+/* #######################################################################
+####################################################################### */
+
+/* body styles */
+
+body {
+    background-color: #220904;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+/* #######################################################################
+####################################################################### */
+
+/* header styles */
+
+#header{
+    height: 90px;
+    width: 100%;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background-color: #220904;
+    color: #e5e0dc;
+}
+
+#header-img{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 80px;
+}
+
+#header-title{
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* menu button styles */
+.menu-button{
+    margin-left: auto;
+    padding: 10px;
+    border: 0;
+    background-color:  transparent;
+    color: #e5e0dc;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-button span{
+    font-size: 2rem;
+}
+
+/* #######################################################################
+####################################################################### */
+
+/* navbar */
+
+#nav-bar{
+    margin-left: auto;
+}
+
+#nav-bar ul{
+    display: flex;
+    list-style: none;
+}
+
+#nav-bar ul li a{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #e5e0dc;
+    padding: 20px 15px;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+#nav-bar ul li a:hover{
+    background-color: #e5e0dc;
+    color: #000000;
+}
+
+#nav-bar.active{ /* for smaller screens */
+    display: block;
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background-color: #220904;
+    color: #220904;
+}
+
+#nav-bar.active ul{
+    flex-direction: column;
+    width: 100%;
+}
+
+#nav-bar.active ul li a{
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #e5e0dc;
+    padding: 20px 10px;
+    margin: inherit;
+    transition: background-color 0.3s ease;
+}
+
+#nav-bar.active ul li:last-child{
+    border-bottom: 1px solid #e5e0dc;
+}
+
+#nav-bar.active ul li a:hover{
+    background-color: #e5e0dc;
+    color: #220904;
+}
+
+/* #######################################################################
+####################################################################### */
+
+/* main styles */
+
+main{
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    color: #ffffff;
+}
+
+main section{
+    scroll-margin-top: 90px;
+}
+
+/* #######################################################################
+####################################################################### */
+
+/* home styles */
+
+#home{
+    width: 100%;
+}
+
+div.slogan-container{
+    height: calc(100vh - 90px);
+    width: 100%;
+    background-image: url(images/coffe-background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    z-index: 1;
+}
+
+.slogan{
+    max-width: 100%;
+    position: absolute;
+    top: 3%;
+    padding: 0 10px;
+    width: 70%;
+    font-size: 4vw;
+    color: #ffffff;
+}
+
+/* #######################################################################
+####################################################################### */
+
+/* newsletter section styles */
+
+#newsletter{
+    min-height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+#newsletter > h3{
+    font-weight: bold;
+    font-size: 3rem;
+    color: #e5e0dc;
+}
+
+#newsletter > p{
+    width: 80%;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-align: justify;
+    color: #e5e0dc;
+}
+
+#newsletter > form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+#newsletter > form input{
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    border: 0;
+    background-color: #e5e0dc;
+    color: #220904;
+}
+
+#newsletter > form input[type="email"]{
+    max-width: 650px;
+    width: 90%;
+}
+
+#newsletter > form input[type="submit"]{
+    margin-top: 2rem;
+    max-width: 400px;
+    width: 90%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#newsletter > form input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #bdbdbd;
+    color: #000000;
+}
+
+/* #######################################################################
+####################################################################### */
+
+/* features section styles */
+
+#features{
+    background-color: #e5e0dc;
+    width: 100%;
+}
+
+.features-list{
+    min-height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features-list li{
+    flex: 1;
+    width: 750px;
+    gap: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #220904;
+    padding: 1rem;
+    border-bottom: 1px solid #220904;
+}
+
+.features-list li:last-child{
+    border-bottom: 0;
+}
+
+.features-list li span{
+    font-size: 4.5rem;
+    margin: 2rem 2.5rem 2rem 0;
+    font-weight: bold;
+}
+
+.features-list li .info h3{
+    font-size: 1.5rem;
+}
+
+.features-list li .info p{
+    font-weight: bold;
+    display: block;
+    font-size: 1rem;
+}
+
+/* #######################################################################
+####################################################################### */
+
+/* products section styles */
+
+#products{
+    min-height: calc(100vh - 90px);
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#products > h3{
+    width: 80%;
+    font-weight: bold;
+    font-size: 3rem;
+    color: #e5e0dc;
+}
+
+#products > p{
+    width: 80%;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-align: justify;
+    color: #e5e0dc;
+}
+
+#video{
+    width: 500px;
+    height: 250px;
+    margin-top: 1rem;
+}
+
+/* #######################################################################
+####################################################################### */
+
+/* pricing section styles */
+
+#pricing{
+    background-color: #e5e0dc;
+    min-height: calc(100vh - 90px);
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; /* Adjust the height of the elements */
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.product {
+    flex: 1;
+    max-height: 90%;
+    min-width: 350px;
+    max-width: calc(100% / 3 - 2%);
+    min-height: 500px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0 1px #220904;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #220904;
+    position: relative;
+    z-index: 1;
+}
+
+.product .name{
+    width: 100%;
+    height: 100px;
+    background-color: #220904;
+    color: #e5e0dc;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem 0.5rem 0  0;
+}
+
+.price{
+    font-size: 3rem;
+    position: absolute;
+    top: calc(5% + 100px);
+}
+
+.info-product{
+    align-self:center;
+    margin: calc(1rem + 100px) 0 1rem 0;
+    list-style: none;
+    padding: 0 5px 0 5px;
+    text-align: center;
+}
+
+.info-product li{
+    padding: 5px 0 5px 0;
+}
+
+.btn-select{
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 0;
+    font-weight: bold;
+    width: 100%;
+    height: calc(10% + 1rem);
+    cursor: pointer;
+    background-color: #220904;
+    color: #e5e0dc;
+}
+
+.btn-select:hover{
+    background-color: #312321;
+}
+
+/* ************************************************** */
+/* ************************************************** */
+/* media queries */
+
+@media (min-width:1200px) {
+    /* navbar styles */
+    .menu-button{
+        display: none;
+    }
+}
+
+/* ************************************************** */
+
+@media (max-width:1199px){
+    /* header styles */
+    #nav-bar{
+        display: none;
+    }
+    /* pricing section styles */
+    #pricing{
+        padding: 1rem;
+    }
+    .product {
+        max-width: calc(100% / 3 - 1rem);
+    }
+}
+
+@media (max-width:1023px){
+    /* slogan styles */
+    div.slogan-container{
+        background-size: content;
+        background-position: 60%;
+    }
+    .slogan{
+        font-size: 5vw;
+        width: 95%;
+    }
+    /* newsletter section styles */
+    #newsletter > p{
+        width: 100%;
+    }
+    /* products section styles */
+    #products > p{
+        width: 100%;
+    }
+}
+
+@media (max-width:767px){
+    /* header styles */
+    #header-img{
+        margin-left: 1rem;
+        margin-right: 0.5rem;
+        width: 60px;
+    }
+    #header-title{
+        font-size: 1.5rem;
+    }
+    /* slogan styles */
+    .slogan{
+        font-size: 6.5vw;
+    }
+    /* features section styles */
+    .features-list li{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .features-list li span{
+        font-size: 6rem;
+        margin: 0;
+    }
+    /* products section styles */
+    #products > h3{
+        font-size: 2.5rem;
+        width: 100%;
+    }
+    #video{
+        width: calc(480px - 1rem);
+        height: calc(240px - 0.5rem);
+    }
+}
+
+@media (max-width:480px){
+    html{
+        font-size: 16px;
+    }
+    /* slogan styles */
+    .slogan{
+        font-size: 7.5vw;
+    }
+    /* features section styles */
+    .features-list li span{
+        font-size: 4rem;
+    }
+    /* newslette section styles */
+    #newsletter > h3{
+        font-size: 10vw;
+    }
+    #newsletter > p{
+        font-size: 1.2rem;
+    }
+    #newsletter form input{
+        font-size: 1.2rem;
+    }
+    /* products section styles */
+    #products > h3{
+        font-size: 10vw;
+    }
+    #products > p{
+        font-size: 1.2rem;
+    }
+    #video{
+        width: calc(300px - 1rem);
+        height: 150px;
+    }
+    /* pricing section styles */
+    .product {
+        min-width: 270px;
+        max-width: calc(100% - 50px);
+        min-height: 500px;
+    }
+    .price{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:300px){
+    /* features section styles */
+    .features-list li span{
+        font-size: 4rem;
+    }
+    /* newslette section styles */
+    #newsletter > p{
+        font-size: 1rem;
+    }
+    #newsletter form input{
+        font-size: 1rem;
+    }
+    /* products section styles */
+    #products > p{
+        font-size: 1rem;
+    }
+    #video{
+        min-width: 100px;
+        max-width: calc(300px - 1rem);
+        width: 100%;
+        height: 100%;
+    }
+    /* pricing section styles */
+    #pricing{
+        font-size: 1rem;
+    }
+    .product {
+        min-width: 200px;
+        max-width: 100%;
+        min-height: 500px;
+    }
+    .info-product{
+        align-self: center;
+        margin: calc(0.5rem + 50px) 0 0.5rem 0;
+        list-style: none;
+        padding: 0 5px 0 5px;
+        text-align: center;
+    }
+}
