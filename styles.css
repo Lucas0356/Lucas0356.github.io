@@ -17,6 +17,14 @@ html{
     scroll-behavior: smooth;
 }
 
+h3.section-title{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: max(3rem, 3.5vw);
+    padding: max(1.5rem, 2%) 0;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
 /* ----------------------------------------------------- */
 
 /* ----------------------------------------------------- */
@@ -82,8 +90,8 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #220904;
-    transition: transform(0,3s);
+    background-color: #055d9c;
+    box-shadow: 0 2px 0 #033d66;
 }
 
 #navbar.active ul.menu{
@@ -112,6 +120,11 @@ header{
     cursor: pointer;
 }
 
+.menu-button > span:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
 .close-button{
     display: none;
 }
@@ -123,7 +136,7 @@ header{
     right: 31px;
     background-color: transparent;
     border: 0;
-    color: #fffa93;
+    color: #c2e1e5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,6 +146,11 @@ header{
     margin: auto 0;
     font-size: 2.5rem;
     cursor: pointer;
+}
+
+#navbar.active .close-button > span:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
 }
 
 /* ----------------------------------------------------- */
@@ -179,13 +197,28 @@ body section{
 /* about me section styles */
 
 #aboutme-section{
-    height: calc(100vh - 75px);
+    min-height: calc(100vh - 75px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     background-color: #c2e1e5;
+}
+
+#aboutme-section h3.section-title {
+    color: #003161;
+    text-shadow: none;
+}
+
+#aboutme-section .aboutme-text{
+    padding: 0 max(1.5rem, 10%);
+}
+
+#aboutme-section .aboutme-text p{
+    color: #003161;
+    font-size: max(1.5rem, 1vw);
+    margin-bottom: max(1.5rem, 2%);
 }
 
 /* ----------------------------------------------------- */
@@ -203,12 +236,7 @@ body section{
 }
 
 #projects-section h3.section-title{
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-size: max(2.5rem, 3.5vw);
     color: #c2e1e5;
-    padding: 2% 0;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .projects-container{
@@ -315,14 +343,12 @@ body section{
 /* ----------------------------------------------------- */
 
 
-
 /* ========================================================================================================================= */
-/* ========================================================================================================================= */
+/* ===================================================== MEDIA QUERIES ===================================================== */
 /* ========================================================================================================================= */
 
 
 /* ************************************************** */
-/* MEDIA QUERIES */
 
 @media (min-width:1200px) {
     
@@ -362,12 +388,11 @@ body section{
 
 @media (max-width:767px) {
     
-    /* Projects-section ========================== */
+    /* Generals-styles =========================== */
     
-    /* H3 title font-size for small screens ------ */
-    #projects-section h3.section-title {
-        font-size: max(1.5rem, 7vw);
-        padding: 5% 0;
+    /* title font-size for small screens ------ */
+    h3.section-title {
+        font-size: max(2.2rem, 7vw);
     }
     /* ------------------------------------------- */
 
@@ -376,7 +401,7 @@ body section{
 
 /* ************************************************** */
 
-@media (max-width:480px){
+@media (max-width:450px){
 
     /* Header styles ============================= */
 
